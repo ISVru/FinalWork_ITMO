@@ -1,0 +1,209 @@
+@import "style.css";
+.images {
+    margin-top: 4rem;
+    display: flex;
+}
+
+.images-main,
+.images-additional {
+    flex: 1;
+}
+
+.images-main {
+    position: relative;
+}
+
+.images-main span {
+    position: absolute;
+    top: .5rem;
+    /* 0.5rem */
+    left: .5rem;
+    /* 0.5rem */
+    right: .5rem;
+    /* 0.5rem */
+    background-color: rgb(237, 231, 246);
+    text-align: center;
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+    letter-spacing: 2px;
+    /* расстояние между буквами */
+}
+
+.images-additional {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.images-additional div {
+    width: 50%;
+}
+
+.images img {
+    height: 100%;
+    display: block;
+}
+
+.short-description {
+    display: flex;
+}
+
+.short-description div {
+    flex: 1;
+}
+
+.category,
+.title,
+.price,
+.to-cart {
+    display: block;
+    padding: .7rem 1.5rem;
+    /* 0.7rem 1.5rem */
+}
+
+.to-cart {
+    background-color: rgb(106, 27, 154);
+    color: rgb(237, 231, 246);
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.category {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title,
+.price {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.price {
+    text-align: center;
+}
+
+.margin-bottom {
+    margin-bottom: 2rem;
+}
+
+
+/* ЧЕТВЕРТЫЙ РЯД */
+
+.additional-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.additional-options i {
+    font-size: 5rem;
+    margin-right: 5px;
+}
+
+.tip {
+    position: relative;
+}
+
+.text {
+    /* visibility: hidden;*/
+    opacity: 0;
+    /* прозрачность от 0 до 1 */
+    position: absolute;
+    color: rgb(106, 27, 154);
+    background-color: rgb(237, 231, 246);
+    border-radius: 5px;
+    text-align: center;
+    padding: .5rem;
+}
+
+.tip:hover .text {
+    /* visibility: visible;*/
+    opacity: 1;
+    transition: opacity 2s linear;
+}
+
+
+/* ПЯТЫЙ РЯД */
+
+.similar {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.similar h1 {
+    grid-column: 1 / 4;
+}
+
+.item div {
+    height: 60%;
+}
+
+.item h1 {
+    text-transform: uppercase;
+}
+
+.item img {
+    height: 100%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.item a {
+    display: block;
+    background-color: rgb(106, 27, 154);
+    color: rgb(237, 231, 246);
+    text-align: center;
+    padding: .5rem 0;
+    text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+/*меняем верхний регистр первой буквы элементов span */
+
+.images-main span::first-letter,
+.category::first-letter,
+.to-cart::first-letter {
+    text-transform: uppercase;
+}
+
+.images-additional div {
+    position: relative;
+    /*позионирование относительно контейнера (родителя)*/
+}
+
+
+/*before первый дочерний элемент div ,а after последний */
+
+.images-additional div::before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 1s;
+}
+
+.images-additional div:hover::before {
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 1s;
+}
+
+.item:hover img {
+    transform: scale(1.5);
+    /* меньше 1 ,если больше то увеличиваться будет масштаб*/
+    transition: transform 2s linear;
+    /* увеличение изображения при наведении мыши*/
+}
+
+.item div {
+    overflow: hidden;
+    /*(scroll появляется полоса прокрутки) скрывает то что не вмещается в контейнер*/
+}
+
+
+/*самые тяжелые для браузера -трансформации и тени ,анимации */
+
+
+/* для браузера легче сменить позиции через transform вмсет опозиуциоирования)*/

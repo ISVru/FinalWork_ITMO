@@ -1,0 +1,70 @@
+html {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    color: rgb(106, 27, 154);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+header,
+footer {
+    background-color: rgb(106, 27, 154);
+}
+
+.submenu {
+    display: none;
+}
+
+#menu {
+    display: flex;
+}
+
+#menu>a {
+    flex: 1;
+    /* элементы займут весь контейнер и будут равной ширины */
+    text-decoration: none;
+    /*убрать подчеркивание*/
+    color: rgb(237, 231, 246);
+    /*задать цвет текста*/
+    text-align: center;
+    /*текст по центру*/
+    /*padding сверху и снизу по 1rem*/
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+#menu a:hover {
+    background-color: rgb(49, 27, 146);
+}
+
+
+/* position: static; */
+
+.to-menu {
+    font-size: 2.7rem;
+    color: rgb(106, 27, 154);
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}

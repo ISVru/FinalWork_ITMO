@@ -1,0 +1,106 @@
+@import "style.css";
+@import "flex-grid.css";
+.slider {
+    margin-top: 3rem;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.slider>li {
+    display: none;
+    height: 50vh;
+    position: relative;
+}
+
+.slider img {
+    height: 100%;
+}
+
+.slider>li.active {
+    display: block;
+}
+
+.slide-title,
+.slide-description {
+    position: absolute;
+    /* padding снизу и сверху - 1rem
+       padding слева и справа - 2rem */
+    padding: 1rem 2rem;
+    color: rgb(237, 231, 246);
+    /* цвет текста */
+    background-color: rgb(49, 27, 146);
+    /* цвет фона */
+    text-transform: uppercase;
+    /* в верхнем регистре */
+    font-weight: bold;
+    /* жирное начертание */
+}
+
+.slide-title {
+    top: 2rem;
+    right: 2rem;
+}
+
+.slide-description {
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.popular {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.update {
+    margin-left: auto;
+    background-color: rgb(106, 27, 154);
+    color: rgb(237, 231, 246);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    /* вид курсора */
+}
+
+.category-menu {
+    display: flex;
+}
+
+.category-menu a {
+    flex: 1;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: rgb(106, 27, 154);
+    text-align: center;
+}
+
+.category-menu a:nth-child(1) {
+    background-color: rgb(251, 140, 0);
+}
+
+.category-menu a:nth-child(2) {
+    background-color: rgb(206, 147, 216);
+}
+
+.category-menu a:nth-child(3) {
+    background-color: rgb(129, 199, 132);
+}
+
+.item {
+    margin: 5px;
+    /*text-align: center;*/
+}
+
+.item h1 {
+    text-transform: uppercase;
+}
+
+.item a {
+    display: block;
+    background-color: rgb(106, 27, 154);
+    color: rgb(237, 231, 246);
+    text-align: center;
+    padding: 0.5rem 0;
+    text-decoration: none;
+}
